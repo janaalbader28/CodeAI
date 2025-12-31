@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CodeAI Learning Hub – Course</title>
+<meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets. Perfect for students and developers.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="Courses course-page">
+
+<aside class="sidebar">
+<h3>LEARNING HUB</h3>
+<div class="nav-item" onclick="location.href='analysis.html'"><i class="fa-solid fa-chart-line"></i>Analysis</div>
+<div class="nav-item active" onclick="location.href='courses.html'"><i class="fa-solid fa-book"></i>Courses</div>
+<div class="nav-item" onclick="location.href='challenges.html'"><i class="fa-solid fa-clipboard-check"></i>Challenges</div>
+<div class="nav-item" onclick="location.href='community.html'"><i class="fa-solid fa-comments"></i>Community</div>
+<div class="tooltip nav-item nav-disabled">
+  <i class="fa-solid fa-newspaper"></i> Resources
+  <span class="tooltiptext">Coming Soon</span>
+</div>
+<div class="back-home">
+  <div class="nav-item" onclick="location.href='profile.html'">
+  <i class="fa-solid fa-user"></i>Profile
+</div>
+<div class="nav-item" onclick="location.href='index.html'">
+<i class="fa-solid fa-house"></i>Back to Homepage</div>
+</div>
+</aside>
+
+<main class="main">
+
+<div class="section-header" style="align-items:flex-start">
+  <div>
+    <h2 class="section-title" id="courseTitle">Error Handling Patterns</h2>
+    <p class="meta" id="courseHours">0 hours</p>
+    <p class="progress-text" id="courseCompleted">0 / 0 completed</p>
+  </div>
+</div>
+
+<div style="margin-bottom:24px">
+  <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px">
+    <span>Course Progress</span>
+    <span id="coursePercent">0%</span>
+  </div>
+  <div class="progress">
+    <span id="courseProgressBar" style="width:0%"></span>
+  </div>
+</div>
+
+<div class="course-tabs">
+  <button class="tab active" onclick="showTab('overview',this)">
+    <i class="fa-regular fa-bookmark"></i> Overview
+  </button>
+  <button class="tab" onclick="showTab('videos',this)">
+    <i class="fa-solid fa-play"></i> Videos
+  </button>
+  <button class="tab" onclick="showTab('test',this)">
+    <i class="fa-regular fa-clipboard"></i> Test
+  </button>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview" class="course-panel">
+  <h3>About This Course</h3>
+  <p id="courseDescription">
+    Learn proper error handling and debugging techniques.
+  </p>
+
+  <h4>What You'll Learn</h4>
+  <ul class="checklist">
+    <li>Understand core concepts and fundamentals</li>
+    <li>Build practical skills through hands-on exercises</li>
+    <li>Apply knowledge to real-world scenarios</li>
+    <li>Prepare for technical interviews and assessments</li>
+  </ul>
+
+  <h4>Requirements</h4>
+  <ul class="dotlist">
+    <li>Basic understanding of programming concepts</li>
+    <li>A computer with internet access</li>
+    <li>Willingness to practice and experiment</li>
+  </ul>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="course-panel hidden">
+  <div id="lessonsList"></div>
+</section>
+
+<!-- TEST -->
+<section id="test" class="course-panel hidden">
+  <p>Complete all lessons to unlock the test.</p>
+</section>
+</main>
+
+<script>
+function showTab(id,el){
+ document.querySelectorAll('.course-panel').forEach(s=>s.classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+ el.classList.add('active');
+}
+</script>
+
+<script type="module" src="js/courses.js"></script>
+</body>
+</html>

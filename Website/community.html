@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeAI Learning Hub – Community</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets. Perfect for students and developers.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="Community">
+<div class="community-coming-soon">
+    <div class="coming-soon-content">
+        <i class="fa-solid fa-dice fa-4x"></i>
+        <h2>Coming Soon</h2>
+        <p>Stay tuned! Exciting community features are on the way.</p>
+    </div>
+</div>
+
+<aside class="sidebar">
+  <h3>LEARNING HUB</h3>
+
+<div class="nav-item" onclick="location.href='analysis.html'"><i class="fa-solid fa-chart-line"></i>Analysis</div>
+<div class="nav-item" onclick="location.href='courses.html'"><i class="fa-solid fa-book"></i>Courses</div>
+<div class="nav-item" onclick="location.href='challenges.html'"><i class="fa-solid fa-clipboard-check"></i>Challenges</div>
+<div class="nav-item active"><i class="fa-solid fa-comments"></i>Community</div>
+<div class="tooltip nav-item nav-disabled">
+  <i class="fa-solid fa-newspaper"></i> Resources
+  <span class="tooltiptext">Coming Soon</span>
+</div>
+<div class="back-home">
+  <div class="nav-item" onclick="location.href='profile.html'">
+  <i class="fa-solid fa-user"></i>Profile
+</div>
+<div class="nav-item" onclick="location.href='index.html'">
+<i class="fa-solid fa-house"></i>Back to Homepage</div>
+</div>
+</aside>
+
+<main class="main">
+
+  <div class="section-header">
+  <div>
+    <h2 class="section-title">Community Discussions</h2>
+    <p class="subtext">Continue your learning</p>
+  </div>
+</div>
+
+  <!-- SEARCH + FILTER -->
+  <div class="community-search">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search discussions..." />
+    </div>
+
+    <div class="filter-dropdown">
+    <i class="fa-solid fa-filter"></i>
+    <select id="timeFilter">
+        <option value="all">All time</option>
+        <option value="24">Last 24 hours</option>
+        <option value="168">Last week</option>
+        <option value="720">Last month</option>
+        <option value="8760">Last year</option>
+    </select>
+    </div>
+
+    <button id="newPostBtn" class="new-post-btn">
+    <i class="fa-solid fa-plus"></i> New Post
+    </button>
+<div id="postModal" class="post-modal-overlay">
+  <div class="post-modal">
+
+    <div class="post-modal-header">
+      <div>
+        <h3>Create New Discussion</h3>
+        <p class="modal-subtext">
+          Start a new discussion with the community. Be descriptive and respectful.
+        </p>
+      </div>
+      <i id="closeModal" class="fa-solid fa-xmark"></i>
+    </div>
+
+    <label class="modal-label">Title</label>
+    <input
+      id="postTitle"
+      type="text"
+      placeholder="What is your question or topic?"
+      class="post-input"
+      minlength="20"
+      required
+    />
+
+    <label class="modal-label">Category</label>
+    <select id="postCategory" class="post-select" required>
+      <option value="" disabled selected>Select a category</option>
+      <option>JavaScript</option>
+      <option>Python</option>
+      <option>Web Development</option>
+      <option>AI</option>
+      <option>General</option>
+    </select>
+
+    <label class="modal-label">Content</label>
+    <textarea
+      id="postContent"
+      placeholder="Describe your question or share your thoughts."
+      class="post-textarea"
+      rows="6"
+      required
+    ></textarea>
+
+    <p id="postError" class="modal-error"></p>
+
+    <div class="post-modal-actions">
+      <button id="cancelPost" class="btn-secondary">Cancel</button>
+      <button id="submitPost" class="btn-primary">Post Discussion</button>
+    </div>
+
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="community-grid">
+
+    <div class="discussion-list">
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab active"><i class="fa-solid fa-arrow-trend-up"></i> Trending</button>
+        <button class="tab"><i class="fa-regular fa-clock"></i> Recent</button>
+        <button class="tab"><i class="fa-regular fa-message"></i> Unanswered</button>
+      </div>
+
+      <!-- POST -->
+    <div class="discussion-card"
+            data-category="JavaScript"
+            data-answers="23"
+            data-hours="2">
+
+        <div class="avatar">CO</div>
+
+        <div class="content">
+          <div class="title-row">
+            <h3>Best practices for debugging async/await in JavaScript</h3>
+            <span class="hot">Hot</span>
+          </div>
+
+          <p>
+            I've been struggling with debugging async functions. What tools and
+            techniques do you recommend?
+          </p>
+
+          <div class="meta">
+            <span class="user">CodeMaster99</span>
+            <span class="tag">JavaScript</span>
+            <span><i class="fa-regular fa-message"></i> 23</span>
+            <span><i class="fa-regular fa-thumbs-up"></i> 45</span>
+            <span class="time">2 hours ago</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="discussion-card"
+        data-category="React"
+        data-answers="15"
+        data-hours="5">
+        <div class="avatar">RE</div>
+
+        <div class="content">
+          <div class="title-row">
+            <h3>How to structure a React project for scalability?</h3>
+            <span class="hot">Hot</span>
+          </div>
+
+          <p>
+            Looking for advice on folder structure and component organization
+            for large React apps.
+          </p>
+
+          <div class="meta">
+            <span class="user">ReactFan</span>
+            <span class="tag">React</span>
+            <span><i class="fa-regular fa-message"></i> 15</span>
+            <span><i class="fa-regular fa-thumbs-up"></i> 32</span>
+            <span class="time">5 hours ago</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="discussion-card"
+        data-category="General"
+        data-answers="0"
+        data-hours="24">
+        <div class="avatar">NE</div>
+
+        <div class="content">
+          <h3>Python vs JavaScript for beginners?</h3>
+
+          <p>
+            I'm just starting to learn programming. Which language should I focus on first?
+          </p>
+
+          <div class="meta">
+            <span class="user">NewbieCoder</span>
+            <span class="tag">General</span>
+            <span><i class="fa-regular fa-message"></i> 0</span>
+            <span><i class="fa-regular fa-thumbs-up"></i> 67</span>
+            <span class="time">1 day ago</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="right-panel">
+
+      <!-- CATEGORIES -->
+      <div class="panel">
+        <h4>Categories</h4>
+
+        <div class="cat active">All Topics <span>156</span></div>
+        <div class="cat">JavaScript <span>42</span></div>
+        <div class="cat">React <span>28</span></div>
+        <div class="cat">Python <span>35</span></div>
+        <div class="cat">Algorithms <span>24</span></div>
+        <div class="cat">CSS <span>18</span></div>
+        <div class="cat">General <span>9</span></div>
+      </div>
+
+      <!-- CONTRIBUTORS -->
+      <div class="panel">
+        <h4>Top Contributors</h4>
+
+        <div class="contributor">
+          <span class="rank">1</span>
+          <div class="avatar sm">CO</div>
+          <div>
+            <strong>CodeMaster99</strong>
+            <span>156 posts</span>
+          </div>
+        </div>
+
+        <div class="contributor">
+          <span class="rank">2</span>
+          <div class="avatar sm">AL</div>
+          <div>
+            <strong>AlgoWizard</strong>
+            <span>134 posts</span>
+          </div>
+        </div>
+
+        <div class="contributor">
+          <span class="rank">3</span>
+          <div class="avatar sm">RE</div>
+          <div>
+            <strong>ReactFan</strong>
+            <span>98 posts</span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const cards = document.querySelectorAll(".discussion-card");
+  const searchInput = document.querySelector(".search-box input");
+  const tabs = document.querySelectorAll(".tab");
+  const categories = document.querySelectorAll(".cat");
+
+  let activeTab = "trending";
+  let activeCategory = "All Topics";
+
+  /* ---FILTER----- */
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+      const title = card.querySelector("h3").innerText.toLowerCase();
+      const text = card.innerText.toLowerCase();
+      const answers = Number(card.dataset.answers);
+      const hours = Number(card.dataset.hours);
+      const category = card.dataset.category;
+
+      let visible = true;
+
+      /* SEARCH */
+      if (!title.includes(query) && !text.includes(query)) {
+        visible = false;
+      }
+
+      /* TAB FILTER */
+      if (activeTab === "recent" && hours > 24) visible = false;
+      if (activeTab === "unanswered" && answers > 0) visible = false;
+
+      /* CATEGORY FILTER */
+      if (activeCategory !== "All Topics" && category !== activeCategory) {
+        visible = false;
+      }
+
+      card.style.display = visible ? "flex" : "none";
+    });
+  }
+
+
+  searchInput.addEventListener("input", applyFilters);
+
+  /* ----TABS (Trending / Recent / Unanswered)----- */
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      if (tab.innerText.includes("Recent")) activeTab = "recent";
+      else if (tab.innerText.includes("Unanswered")) activeTab = "unanswered";
+      else activeTab = "trending";
+
+      applyFilters();
+    });
+  });
+
+  /* ---CATEGORIES----- */
+  categories.forEach(cat => {
+    cat.addEventListener("click", () => {
+      categories.forEach(c => c.classList.remove("active"));
+      cat.classList.add("active");
+
+      activeCategory = cat.childNodes[0].textContent.trim();
+      applyFilters();
+    });
+  });
+
+});
+</script>
+    <script>
+    /* New Post */
+    const newPostBtn = document.getElementById("newPostBtn");
+    const postModal = document.getElementById("postModal");
+    const closeModal = document.getElementById("closeModal");
+    const cancelPost = document.getElementById("cancelPost");
+    const submitPost = document.getElementById("submitPost");
+
+    const titleInput = document.getElementById("postTitle");
+    const categorySelect = document.getElementById("postCategory");
+    const contentInput = document.getElementById("postContent");
+    const errorMsg = document.getElementById("postError");
+
+    newPostBtn.addEventListener("click", () => {
+    postModal.classList.add("show");
+    document.body.style.overflow = "hidden";
+    });
+
+    function closePostModal(){
+    postModal.classList.remove("show");
+    document.body.style.overflow = "auto";
+    errorMsg.textContent = "";
+    }
+
+    closeModal.addEventListener("click", closePostModal);
+    cancelPost.addEventListener("click", closePostModal);
+
+    postModal.addEventListener("click", e => {
+    if (e.target === postModal) closePostModal();
+    });
+
+    submitPost.addEventListener("click", () => {
+    const title = titleInput.value.trim();
+    const category = categorySelect.value;
+    const content = contentInput.value.trim();
+
+    if (!title || !category || !content) {
+        errorMsg.textContent = "All fields are required.";
+        return;
+    }
+
+    if (title.length < 20) {
+        errorMsg.textContent = "Title must be at least 20 characters long.";
+        return;
+    }
+
+    errorMsg.textContent = "";
+
+    closePostModal();
+
+    titleInput.value = "";
+    categorySelect.selectedIndex = 0;
+    contentInput.value = "";
+    });
+    </script>
+
+</body>
+</html>

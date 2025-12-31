@@ -1,0 +1,150 @@
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  width: 320px;      
+  padding: 12px;
+  background: linear-gradient(180deg,#ffffff,#f7f9fb);
+  color: #0b1220;
+  border: none;      
+}
+
+body.dark {
+  background: linear-gradient(180deg,#071322,#0b1622);
+  color: #e6eef8;
+  border: none;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 8px;
+}
+
+.header .logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(180deg,#0b3b61,#0a2636);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .logo svg {
+  width: 16px;
+  height: 16px;
+  fill: #8FD0FF;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.label-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #0b1220; 
+}
+
+body.dark .label-title {
+  color: #e6eef8;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.2); 
+  background: #ffffff;
+  color: #0b1220;
+  font-size: 14px;
+  appearance: none;
+}
+
+body.dark select {
+  background: #1c2533;
+  border: 1px solid #3a4658;
+  color: #e6eef8;
+}
+
+.arrow {
+  position: absolute;
+  right: 12px;
+  top: 11px;
+  pointer-events: none;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background: #0095ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #007ad4;
+}
+
+#save-msg {
+  text-align: center;
+  margin: 2px 0; 
+  font-size: 13px;
+  height: 18px;
+}
+
+.footer {
+  margin-top: 12px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(0,0,0,0.2); 
+  display: flex;
+  justify-content: center;
+}
+
+body.dark .footer {
+  border-color: rgba(255,255,255,0.15);
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+body.dark .footer-btn {
+  color: #ccc;
+}
+
+.footer-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}

@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CodeAI Settings</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="panel">
+
+    <div class="header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.5 7.5L4 12l4.5 4.5" stroke="#8FD0FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15.5 7.5L20 12l-4.5 4.5" stroke="#8FD0FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="title">CodeAI Settings</span>
+    </div>
+
+    <div class="section">
+      <label class="label-title">THEME</label>
+      <div class="select-wrapper">
+        <select id="theme-select">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        <span class="arrow">▾</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="label-title">DETAIL LEVEL</label>
+      <div class="select-wrapper">
+        <select id="detail-select">
+          <option value="simple">Simple</option>
+          <option value="detailed">Detailed</option>
+        </select>
+        <span class="arrow">▾</span>
+      </div>
+    </div>
+
+    <button id="save-btn" class="save-btn">Save Settings</button>
+    <div id="save-msg"></div>
+
+    <div class="footer">
+        <button id="go-btn" class="footer-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align: middle;">
+            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 3h6v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 3l-9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        Go to website
+      </button>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

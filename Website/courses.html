@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CodeAI Learning Hub – Courses</title>
+<meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets. Perfect for students and developers.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="Courses">
+
+<aside class="sidebar">
+<h3>LEARNING HUB</h3>
+<div class="nav-item" onclick="location.href='analysis.html'"><i class="fa-solid fa-chart-line"></i>Analysis</div>
+<div class="nav-item active"><i class="fa-solid fa-book"></i>Courses</div>
+<div class="nav-item" onclick="location.href='challenges.html'"><i class="fa-solid fa-clipboard-check"></i>Challenges</div>
+<div class="nav-item" onclick="location.href='community.html'"><i class="fa-solid fa-comments"></i>Community</div>
+<div class="tooltip nav-item nav-disabled">
+  <i class="fa-solid fa-newspaper"></i> Resources
+  <span class="tooltiptext">Coming Soon</span>
+</div>
+<div class="back-home">
+  <div class="nav-item" onclick="location.href='profile.html'">
+  <i class="fa-solid fa-user"></i>Profile
+</div>
+<div class="nav-item" onclick="location.href='index.html'">
+<i class="fa-solid fa-house"></i>Back to Homepage</div>
+</div>
+</aside>
+<main class="main">
+
+<div class="section-header">
+  <div>
+    <h2 class="section-title">Courses</h2>
+    <p class="subtext">Continue your learning</p>
+  </div>
+
+  <div class="course-stats">
+    <span class="stat-pill stat-completed">0 Completed</span>
+    <span class="stat-pill stat-progress">0 In Progress</span>
+  </div>
+</div>
+
+
+<div class="recommended" id="recommendedCourses">
+
+</div>
+
+<h3 class="section-title" style="margin-bottom: 10px;">All Courses</h3>
+
+<div class="all-courses" id="allCourses">
+
+</div>
+</main>
+
+<script type="module" src="js/courses.js"></script>
+
+</body>
+</html>

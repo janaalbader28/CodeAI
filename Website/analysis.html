@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeAI Learning Hub – Analysis</title>
+<meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets. Perfect for students and developers.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="Analysis">
+
+<aside class="sidebar">
+  <h3>LEARNING HUB</h3>
+  <div class="nav-item active"><i class="fa-solid fa-chart-line"></i>Analysis</div>
+  <div class="nav-item" onclick="location.href='courses.html'"><i class="fa-solid fa-book"></i>Courses</div>
+  <div class="nav-item" onclick="location.href='challenges.html'"><i class="fa-solid fa-clipboard-check"></i>Challenges</div>
+  <div class="nav-item" onclick="location.href='community.html'"><i class="fa-solid fa-comments"></i>Community</div>
+<div class="tooltip nav-item nav-disabled">
+  <i class="fa-solid fa-newspaper"></i> Resources
+  <span class="tooltiptext">Coming Soon</span>
+</div>
+<div class="back-home">
+  <div class="nav-item" onclick="location.href='profile.html'">
+  <i class="fa-solid fa-user"></i>Profile
+</div>
+<div class="nav-item" onclick="location.href='index.html'">
+<i class="fa-solid fa-house"></i>Back to Homepage</div>
+</div>
+</aside>
+
+<main class="main">
+
+  <div class="analysis-header">
+    <div>
+      <h2>Your Learning Analysis</h2>
+      <p class="subtext">Track your progress, performance, and problem-solving patterns</p>
+    </div>
+    <span class="header-meta">Based on 156 queries this month</span>
+  </div>
+
+  <div class="analysis-stats">
+
+    <div class="stat-card">
+      <i class="fa-solid fa-code stat-icon blue"></i>
+      <div>
+        <span class="stat-value">0</span>
+        <span class="stat-title">Total Queries</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-triangle-exclamation stat-icon red"></i>
+      <div>
+        <span class="stat-value">0</span>
+        <span class="stat-title">Errors Found</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-arrow-trend-up stat-icon green"></i>
+      <div>
+        <span class="stat-value"></span>
+        <span class="stat-title">Favorite Language</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-bullseye stat-icon yellow"></i>
+      <div>
+        <span class="stat-value">0%</span>
+        <span class="stat-title">Improvement Rate</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="analysis-grid">
+    <div class="panel">
+      <h4>Language Distribution</h4>
+      <canvas id="languageChart"></canvas>
+    </div>
+
+    <div class="panel">
+      <h4>Common Error Types</h4>
+      <canvas id="errorChart"></canvas>
+    </div>
+  </div>
+
+  <div class="panel ">
+    <h4>Weekly Activity</h4>
+    <canvas id="weeklyChart"></canvas>
+  </div>
+ <div class="panel">
+  <h4>Areas to Improve</h4>
+<canvas id="improveChart"></canvas>
+</div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script type="module" src="js/analysis.js"></script>
+<script type="module" src="js/charts.js"></script>
+
+</body>
+</html>

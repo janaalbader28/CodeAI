@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeAI Learning Hub – Challenges</title>
+<meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets. Perfect for students and developers.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="Challenges">
+
+<aside class="sidebar">
+  <h3>LEARNING HUB</h3>
+  <div class="nav-item" onclick="location.href='analysis.html'"><i class="fa-solid fa-chart-line"></i>Analysis</div>
+  <div class="nav-item" onclick="location.href='courses.html'"><i class="fa-solid fa-book"></i>Courses</div>
+  <div class="nav-item active"><i class="fa-solid fa-clipboard-check"></i>Challenges</div>
+  <div class="nav-item" onclick="location.href='community.html'"><i class="fa-solid fa-comments"></i>Community</div>
+<div class="tooltip nav-item nav-disabled">
+  <i class="fa-solid fa-newspaper"></i> Resources
+  <span class="tooltiptext">Coming Soon</span>
+</div>
+  <div class="back-home">
+  <div class="nav-item" onclick="location.href='profile.html'">
+  <i class="fa-solid fa-user"></i>Profile
+</div>
+<div class="nav-item" onclick="location.href='index.html'">
+<i class="fa-solid fa-house"></i>Back to Homepage</div>
+</div>
+</aside>
+
+<main class="main">
+
+  <div class="section-header">
+    <div>
+      <h2 class="section-title">Coding Challenges</h2>
+      <p class="subtext">Solve real problems in any language you like</p>
+    </div>
+    <div class="course-stats">
+    <span class="stat-pill streak-fire"><i class="fa-solid fa-fire"></i> 0</span>
+  </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <i class="fa-solid fa-check-circle stat-icon"></i>
+      <div class="stat-text">
+        <span class="stat-value" data-count="27">0</span></br>
+        <span class="stat-title">Solved Challenges</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-chart-line stat-icon"></i>
+      <div class="stat-text">
+        <span class="stat-value" data-count="82">0%</span></br>
+        <span class="stat-title">Success Rate</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-code stat-icon"></i>
+      <div class="stat-text">
+        <span class="stat-value lang-pill">JavaScript</span></br>
+        <span class="stat-title">Favorite Language</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-fire stat-icon"></i>
+      <div class="stat-text">
+        <span class="stat-value" data-count="5">0</span></br>
+        <span class="stat-title">Hard Solved</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Competitions & Events -->
+<section class="events-section">
+  <h3 class="section-subtitle">Competitions & Events</h3>
+
+  <div class="events-grid">
+    <div class="event-card red">
+      <span class="event-status active">Upcoming</span>
+      <i class="fa-solid fa-fire event-icon"></i>
+      <h4>30-Day Streak Challenge</h4>
+      <p>Complete one challenge every day for 30 days</p>
+      <div class="event-meta">
+        <span><i class="fa-solid fa-users"></i> 2,450+ joined</span>
+        <span><i class="fa-solid fa-calendar"></i> 18 days left</span>
+      </div>
+    </div>
+
+    <div class="event-card gold">
+      <span class="event-status upcoming">Upcoming</span>
+      <i class="fa-solid fa-trophy event-icon"></i>
+      <h4>Year End Championship</h4>
+      <p>Compete with developers worldwide</p>
+      <div class="event-meta">
+        <span><i class="fa-solid fa-users"></i> 5,200+ joined</span>
+        <span><i class="fa-solid fa-calendar"></i> 45 days left</span>
+      </div>
+    </div>
+
+    <div class="event-card purple">
+      <span class="event-status active">Upcoming</span>
+      <i class="fa-solid fa-bolt event-icon"></i>
+      <h4>Weekly Sprint</h4>
+      <p>Solve 10 challenges this week to earn badges</p>
+      <div class="event-meta">
+        <span><i class="fa-solid fa-users"></i> 890+ joined</span>
+        <span><i class="fa-solid fa-calendar"></i> 4 days left</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="filters filters-row">
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="searchInput" type="text" placeholder="Search challenges..." class="search-input"/>
+    </div>
+    <div class="filter-group">
+      <select id="levelSelect" class="filter-select">
+        <option value="all">All Levels</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <select id="statusSelect" class="filter-select">
+        <option value="all">All Status</option>
+        <option value="solved">Solved</option>
+        <option value="unsolved">Unsolved</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="challenges"></div>
+</main>
+
+<script type="module" src="js/challenges.js"></script>
+</body>
+</html>

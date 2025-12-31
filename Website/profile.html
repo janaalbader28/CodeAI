@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeAI Learning Hub – Profile</title>
+  <meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets." />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="Profile">
+<div class="community-coming-soon">
+<div class="coming-soon-content">
+  <i class="fa-solid fa-award fa-4x"></i>
+  <h2>Coming Soon</h2>
+  <p>New badges and rewards will be added to your profile soon!</p>
+</div>
+
+</div>
+  <aside class="sidebar">
+    <h3>LEARNING HUB</h3>
+    <div class="nav-item" onclick="location.href='analysis.html'">
+      <i class="fa-solid fa-chart-line"></i> Analysis
+    </div>
+    <div class="nav-item" onclick="location.href='courses.html'">
+      <i class="fa-solid fa-book"></i> Courses
+    </div>
+    <div class="nav-item" onclick="location.href='challenges.html'">
+      <i class="fa-solid fa-clipboard-check"></i> Challenges
+    </div>
+    <div class="nav-item" onclick="location.href='community.html'">
+      <i class="fa-solid fa-comments"></i> Community
+    </div>
+    <div class="tooltip nav-item nav-disabled">
+      <i class="fa-solid fa-newspaper"></i> Resources
+      <span class="tooltiptext">Coming Soon</span>
+    </div>
+    <div class="back-home">
+      <div class="nav-item active" onclick="location.href='profile.html'">
+        <i class="fa-solid fa-user"></i> Profile
+      </div>
+      <div class="nav-item" onclick="location.href='index.html'">
+        <i class="fa-solid fa-house"></i> Back to Homepage
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="grid-container">
+
+      <!-- ========== ITEM 1: PROFILE CARD ========== -->
+      <div class="grid-item item-1">
+        <div class="profile-card">
+
+          <!-- Avatar Slider -->
+          <div class="avatar-wrapper">
+            <button class="avatar-nav left" id="prevAvatar">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="avatar-box">
+              <img id="avatarImage" src="img/avatar3.png" alt="Avatar" />
+            </div>
+
+            <button class="avatar-nav right" id="nextAvatar">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Avatar Dots -->
+          <div class="avatar-dots" id="avatarDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <!-- Username -->
+          <div class="username-row">
+            <input class="username-input" value="CodeMaster_42" disabled />
+            <button id="editToggle" class="edit-btn">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+          </div>
+
+          <!-- User Meta -->
+          <div class="user-meta">
+            <div>codemaster@gmail.com</div>
+            <div class="member-date">Member since January 15, 2024</div>
+          </div>
+
+          <!-- Profile Actions -->
+          <div class="profile-actions">
+            <button class="share-btn">
+              <i class="fa-solid fa-share-nodes"></i> Share Profile
+            </button>
+
+            <button class="delete-btn">
+              <i class="fa-solid fa-trash"></i> Delete Account
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== ITEM 2: STREAK CALENDAR ========== -->
+      <div class="grid-item item-2">
+        <div class="streak-calendar">
+
+          <div class="calendar-header">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span>December 2025</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="calendar-week">
+            <span>MON</span>
+            <span>TUE</span>
+            <span>WED</span>
+            <span>THU</span>
+            <span>FRI</span>
+            <span>SUN</span>
+          </div>
+
+          <div class="calendar-grid">
+            <div class="day empty"></div>
+            <div class="day empty"></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day empty"></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day fire"><i class="fa-solid fa-fire"></i></div>
+            <div class="day empty"></div>
+            <div class="day empty"></div>
+            <div class="day empty"></div>
+            <div class="day empty"></div>
+            <div class="day empty"></div>
+            <div class="day empty"></div>
+            <div class="day empty"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== ITEM 3: ACHIEVEMENTS ========== -->
+      <div class="grid-item item-3">
+        <div class="achievements-card">
+          <h2 class="section-title">Achievements</h2>
+          <p class="subtext">Highlights of your learning journey</p>
+
+          <div class="achievement-inner">
+            <div class="achievement-left-main">
+              <div class="achievement-badge">
+                <img src="img/badge4.png" alt="Badge" />
+              </div>
+
+              <div class="achievement-info">
+                <div class="rank">Rank 56</div>
+                <div class="lang">Python</div>
+              </div>
+            </div>
+
+            <div class="achievement-right-actions">
+              <i class="fa-solid fa-share-nodes"></i>
+              <span class="points">1,240 pts</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== ITEM 4: KPIs ========== -->
+      <div class="grid-item item-4">
+        <div class="profile-kpis">
+
+          <div class="kpi-card">
+            <i class="fa-solid fa-award kpi-icon yellow"></i>
+            <div>
+              <span class="kpi-value">12</span>
+              <span class="kpi-title">Badges</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <i class="fa-solid fa-clock kpi-icon blue"></i>
+            <div>
+              <span class="kpi-value">84 h</span>
+              <span class="kpi-title">Hours Learning</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <i class="fa-solid fa-fire kpi-icon red"></i>
+            <div>
+              <span class="kpi-value">21</span>
+              <span class="kpi-title">Longest Streak</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== ITEM 5: BADGES & CERTIFICATES ========== -->
+      <div class="grid-item item-5">
+        <div class="badges-section">
+
+          <h2 class="section-title">Badges</h2>
+
+          <div class="badges-list">
+            <div class="badge-card">
+              <img src="img/badge1.png" alt="Java Badge" />
+              <div class="badge-info">
+                <div class="badge-name">Java Badge</div>
+                <div class="badge-level">Level 1</div>
+              </div>
+            </div>
+
+            <div class="badge-card">
+              <img src="img/badge2.png" alt="JavaScript Badge" />
+              <div class="badge-info">
+                <div class="badge-name">JavaScript Badge</div>
+                <div class="badge-level">Level 2</div>
+              </div>
+            </div>
+
+            <div class="badge-card">
+              <img src="img/badge3.png" alt="C++ Badge" />
+              <div class="badge-info">
+                <div class="badge-name">C++ Badge</div>
+                <div class="badge-level">Level 1</div>
+              </div>
+            </div>
+
+            <div class="badge-card">
+              <img src="img/badge4.png" alt="Python Badge" />
+              <div class="badge-info">
+                <div class="badge-name">Python Badge</div>
+                <div class="badge-level">Level 1</div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title">Certificates</h2>
+          <div class="coming-soon">Coming Soon!</div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const avatars = [
+      "img/avatar1.png",
+      "img/avatar2.png",
+      "img/avatar3.png",
+      "img/avatar4.png",
+      "img/avatar5.png",
+      "img/avatar6.png",
+      "img/avatar7.png"
+    ];
+
+    let currentAvatar = 0;
+    const avatarImg = document.getElementById("avatarImage");
+    const dots = document.querySelectorAll("#avatarDots .dot");
+    const avatarWrapper = document.querySelector(".avatar-wrapper");
+    const prevBtn = document.getElementById("prevAvatar");
+    const nextBtn = document.getElementById("nextAvatar");
+
+    function updateAvatar() {
+      avatarImg.src = avatars[currentAvatar];
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === currentAvatar));
+    }
+
+    nextBtn.onclick = () => {
+      currentAvatar = (currentAvatar + 1) % avatars.length;
+      updateAvatar();
+    };
+
+    prevBtn.onclick = () => {
+      currentAvatar = (currentAvatar - 1 + avatars.length) % avatars.length;
+      updateAvatar();
+    };
+
+    dots.forEach((dot, index) => {
+      dot.onclick = () => {
+        currentAvatar = index;
+        updateAvatar();
+      };
+    });
+
+    const input = document.querySelector(".username-input");
+    const editBtn = document.getElementById("editToggle");
+    let isEditing = false;
+
+    editBtn.onclick = () => {
+      isEditing = !isEditing;
+      if (isEditing) {
+        input.disabled = false;
+        input.classList.add("editing");
+        input.focus();
+        editBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+        editBtn.classList.add("save");
+        avatarWrapper.classList.remove("saved");
+        avatarWrapper.classList.add("editing");
+      } else {
+        input.disabled = true;
+        input.classList.remove("editing");
+        editBtn.innerHTML = '<i class="fa-solid fa-pen"></i>';
+        editBtn.classList.remove("save");
+        avatarWrapper.classList.remove("editing");
+        avatarWrapper.classList.add("saved");
+      }
+    };
+
+    updateAvatar();
+  </script>
+
+  <script>
+    function animateKPI(element, duration = 1500) {
+      const targetText = element.textContent.replace(/[^0-9]/g, '');
+      const isText = element.textContent.match(/[a-zA-Z]/);
+      const target = parseInt(targetText);
+      let start = 0;
+      const stepTime = Math.abs(Math.floor(duration / target));
+
+      const timer = setInterval(() => {
+        start += 1;
+        element.textContent = isText ? start + element.textContent.replace(/\d/g, '') : start;
+        if (start >= target) {
+          element.textContent = isText ? target + element.textContent.replace(/\d/g, '') : target;
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+
+    document.querySelectorAll(".kpi-value").forEach(kpi => animateKPI(kpi));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CodeAI Learning Hub – Lesson</title>
+<meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets. Perfect for students and developers.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="Courses lesson-page">
+
+<aside class="sidebar">
+<h3>LEARNING HUB</h3>
+<div class="nav-item" onclick="location.href='analysis.html'"><i class="fa-solid fa-chart-line"></i>Analysis</div>
+<div class="nav-item active" onclick="location.href='courses.html'"><i class="fa-solid fa-book"></i>Courses</div>
+<div class="nav-item" onclick="location.href='challenges.html'"><i class="fa-solid fa-clipboard-check"></i>Challenges</div>
+<div class="nav-item" onclick="location.href='community.html'"><i class="fa-solid fa-comments"></i>Community</div>
+<div class="tooltip nav-item nav-disabled">
+  <i class="fa-solid fa-newspaper"></i> Resources
+  <span class="tooltiptext">Coming Soon</span>
+</div>
+<div class="back-home">
+  <div class="nav-item" onclick="location.href='profile.html'">
+  <i class="fa-solid fa-user"></i>Profile
+</div>
+<div class="nav-item" onclick="location.href='index.html'">
+<i class="fa-solid fa-house"></i>Back to Homepage</div>
+</div>
+</aside>
+
+ <main class="main">
+
+<div class="section-header">
+  <div>
+    <h2 class="section-title"></h2>
+    <p class="subtext">Lesson 0 of 6</p>
+  </div>
+</div>
+
+<h3>Core Concepts Explained</h3>
+<div class="lesson-header">
+  <button class="back-btn" onclick="location.href='course.html?id=${lessonCourseId}'">
+    <i class="fa-solid fa-list"></i> Back to Video List
+  </button>
+
+  <button class="summary-btn" >
+    <i class="fa-regular fa-file-lines"></i> Show Summary
+  </button>
+</div>
+
+<div class="video-wrapper">
+  <iframe width="100%" height="420"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div style="display:flex; justify-content:space-between; margin-top:30px;">
+  <button class="btn alt">Previous Lesson</button>
+  <button class="btn">Next Lesson</button>
+</div>
+
+</main> 
+<script type="module" src="js/courses.js"></script>
+</body>
+</html>

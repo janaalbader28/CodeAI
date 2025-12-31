@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CodeAI Learning Hub – Challenge</title>
+<meta name="description" content="CodeAI is a lightweight browser extension that helps you instantly understand, debug, and improve code snippets. Perfect for students and developers.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="Challenges challenge-page">
+
+<aside class="sidebar">
+  <h3>LEARNING HUB</h3>
+  <div class="nav-item" onclick="location.href='analysis.html'"><i class="fa-solid fa-chart-line"></i>Analysis</div>
+  <div class="nav-item" onclick="location.href='courses.html'"><i class="fa-solid fa-book"></i>Courses</div>
+  <div class="nav-item active"><i class="fa-solid fa-clipboard-check"></i>Challenges</div>
+  <div class="nav-item" onclick="location.href='community.html'"><i class="fa-solid fa-comments"></i>Community</div>
+<div class="tooltip nav-item nav-disabled">
+  <i class="fa-solid fa-newspaper"></i> Resources
+  <span class="tooltiptext">Coming Soon</span>
+</div>
+
+  <div class="back-home">
+  <div class="nav-item" onclick="location.href='profile.html'">
+  <i class="fa-solid fa-user"></i>Profile
+</div>
+<div class="nav-item" onclick="location.href='index.html'">
+<i class="fa-solid fa-house"></i>Back to Homepage</div>
+</div>
+</aside>
+
+<main class="challenge-main">
+
+  <a href="challenges.html" class="back-link">
+    <i class="fa-solid fa-arrow-left"></i> Back to Challenges
+  </a>
+
+  <div class="challenge-layout">
+
+    <div class="problem-panel">
+      <h2>title</h2>
+
+      <span class="tag easy">difficulty</span>
+      <span class="tag">tag</span>
+
+      <p class="problem-desc">
+        description
+      </p>
+
+      <div class="example-box">
+        <h4>Sample Input</h4>
+        <code>nums = </code>
+      </div>
+
+      <div class="example-box">
+        <h4>Sample Output</h4>
+        <code>0</code>
+        <p class="explain">
+        </p>
+      </div>
+    </div>
+
+    <div class="editor-panel">
+      <div class="editor-header">
+        <span><i class="fa-solid fa-code"></i> Solution</span>
+        <select class="lang-select" onchange="changeLang(this.value)">
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+        <option value="csharp">C#</option>
+        </select>
+
+      </div>
+
+    <div id="editor" class="code-editor">
+</div>
+
+      <button class="submit-btn">
+        Submit Solution
+      </button>
+    </div>
+
+  </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+
+<script>
+require.config({
+  paths: {
+    vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs"
+  }
+});
+
+require(["vs/editor/editor.main"], function () {
+  window.editor = monaco.editor.create(document.getElementById("editor"), {
+value: `
+function solution() {
+  // write your code here
+}
+`,
+    language: "javascript",
+    theme: "vs-dark",
+    automaticLayout: true,
+    fontSize: 14,
+    minimap: { enabled: false },
+    scrollBeyondLastLine: false
+  });
+});
+</script>
+<script>
+function changeLang(lang) {
+  monaco.editor.setModelLanguage(editor.getModel(), lang);
+
+  const templates = {
+    javascript: "// Do NOT change function name \nfunction solution() { \n\n}",
+    python: "def solution():\n    pass",
+    java: "class Solution {\n    public void solution() {\n    }\n}",
+    cpp: "void solution() {\n}",
+    csharp: "void Solution() {\n}"
+  };
+
+  editor.setValue(templates[lang]);
+}
+</script>
+<script type="module" src="js/challenges.js"></script>
+
+</body>
+</html>
