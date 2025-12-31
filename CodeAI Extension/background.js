@@ -79,7 +79,7 @@ async function recordUsage(stat) {
 
 // ================= OPENAI CALL =================
 async function fetchAIResponse(code, actionType, detailLevel) {
-  const apiKey = "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"; 
+  const apiKey = "YOUR_API_KEY_HERE"; 
   let prompt = "";
   switch (actionType) {
     case "explain":
