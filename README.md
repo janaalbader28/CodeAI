@@ -4,7 +4,7 @@
 
 ## 📽 Demo
 
-[![Watch the demo](assets/demo-thumb.png)](https://youtube.com/shorts/VwQ2l3VSW7g?si=Vxaps0EdtZlRvfNd)
+[![Watch the demo](https://img.youtube.com/vi/QixyjqqHEhA/0.jpg)](https://youtu.be/QixyjqqHEhA)
 
 
 ## 🌟 Features
