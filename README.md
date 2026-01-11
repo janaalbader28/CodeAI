@@ -38,7 +38,7 @@ Follow these steps to install and run CodeAI locally.
 
 ### Prerequisites
 - Google Chrome
-- An **OpenAI API Key** ([Get your key here](https://platform.openai.com/))
+- An **OpenAI API Key** ([Get your key here](https://platform.openai.com/api-keys))
 
 ### Installation
 
