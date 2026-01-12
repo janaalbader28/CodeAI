@@ -6,6 +6,9 @@
 
 [![Watch the demo](assets/demo-thumb.png)](https://youtu.be/QixyjqqHEhA)
 
+## Presentation Slides
+[View the slides](https://www.canva.com/design/DAG9TDqyxh0/gRjOqjKlKEZi8U4orLpy2w/view)
+
 ## 🌟 Features
 
 1. **Chrome Extension**  
